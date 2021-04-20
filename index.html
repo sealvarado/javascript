@@ -1,0 +1,62 @@
+<html>
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function Sumar(a, b){
+            return a + b;
+        }
+
+        function presionarBoton() {
+
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            
+            console.log("numero 1: " + num1);
+            console.log("numero 2: " + num2);
+
+            let resultado = Sumar(parseInt(num1), Number(num2));
+            document.getElementById("num3").value = resultado;
+            console.log(resultado)
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="num1">Número 1</label>
+                    <input type="number" class="form-control" id="num1" name="num1">
+                </div>
+                <div class="form-group">
+                    <label for="num2">Número 2</label>
+                    <input type="number" class="form-control" id="num2" name="num2">
+                </div>
+                <div class="form-group">
+                    <label for="num3">Resultado</label>
+                    <input type="number" class="form-control" id="num3" name="num3">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="presionarBoton()">
+                    Sumar
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
